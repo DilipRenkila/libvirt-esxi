@@ -9,6 +9,7 @@ sudo apt-get build-dep libvirt
 dpkg-source -x libvirt*dsc
 nano libvirt*/debian/rules
         Change "--without-esx" to "--with-esx"
+        Change "--without-ssh2" to "--with-ssh2"
 cd libvirt*
 sudo apt-get install libcurl4-gnutls-dev
 dpkg-buildpackage -us -uc -b -rfakeroot
