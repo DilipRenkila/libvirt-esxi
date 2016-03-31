@@ -5,11 +5,11 @@ Actually normal ubuntu libvirt package doesn't support vmware esxi hypervisor. B
 mkdir libvirt
 cd libvirt
 apt-get source -d libvirt
-sudo apt-get build-dep libvirt
+sudo apt-get build-dep libvirt fakeroot
 dpkg-source -x libvirt*dsc
 nano libvirt*/debian/rules
         Change "--without-esx" to "--with-esx"
-        Change "--without-libssh2" to "--with-ssh2"
+        Change "--without-libssh2" to "--with-libssh2"
 cd libvirt*
 sudo apt-get install libcurl4-gnutls-dev
 dpkg-buildpackage -us -uc -b -rfakeroot
