@@ -16,3 +16,4 @@ dpkg-buildpackage -us -uc -b -rfakeroot
 cd ..
 sudo dpkg -i *.deb
 ````
+https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1
